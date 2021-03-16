@@ -145,3 +145,4 @@ Start importing Assets/Scenes/MenuSettings.lighting using Guid(0bb7a77a73e944c4e
  -> (artifact id: 'fe5547cbd9461945a5b56352d1e0f211') in 0.053464 seconds
   Import took 0.057946 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
