@@ -371,7 +371,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 219922829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1126826032}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnAttackButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &219922829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +760,7 @@ GameObject:
   - component: {fileID: 557852360}
   - component: {fileID: 557852359}
   m_Layer: 5
-  m_Name: TauntButton
+  m_Name: TalkButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -817,7 +829,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 557852360}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1126826032}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnTalkButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &557852360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,7 +1029,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Taunt
+  m_Text: Talk
 --- !u!222 &620362226
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1479,6 +1503,10 @@ MonoBehaviour:
     type: 3}
   playerBattleStation: {fileID: 1080826007}
   enemyBattleStation: {fileID: 1751222928}
+  attackButton: {fileID: 219922828}
+  talkButton: {fileID: 557852359}
+  fleeButton: {fileID: 1768937448}
+  giveItemButton: {fileID: 1903086390}
   dialogueText: {fileID: 1829637496}
   playerHUD: {fileID: 414788409}
   enemyHUD: {fileID: 1845671402}
@@ -1903,7 +1931,7 @@ GameObject:
   - component: {fileID: 1768937449}
   - component: {fileID: 1768937448}
   m_Layer: 5
-  m_Name: FlirtButton
+  m_Name: FleeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1972,7 +2000,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1768937449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1126826032}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnFleeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1768937449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2188,7 +2228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Flirt
+  m_Text: Flee
 --- !u!222 &1824043168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2540,7 +2580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1903086391}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1126826032}
+        m_TargetAssemblyTypeName: BattleSystem, Assembly-CSharp
+        m_MethodName: OnGiveItemButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1903086391
 MonoBehaviour:
   m_ObjectHideFlags: 0
