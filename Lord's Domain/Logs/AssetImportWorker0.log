@@ -601,3 +601,68 @@ System memory in use after: 87.7 MB.
 Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2337.
 Total: 2.407000 ms (FindLiveObjects: 0.222700 ms CreateObjectMapping: 0.088700 ms MarkObjects: 2.057600 ms  DeleteObjects: 0.036500 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1618.142520 seconds.
+  path: Assets/Prefab/Player.prefab
+  artifactKey: Guid(1a0c26a26beee3a49b8711c6c0d7044c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Player.prefab using Guid(1a0c26a26beee3a49b8711c6c0d7044c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52bb1a4ae15504f86077ab353caec974') in 0.084011 seconds
+  Import took 0.090639 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.454859 seconds.
+  path: Assets/Prefab/Player.prefab
+  artifactKey: Guid(1a0c26a26beee3a49b8711c6c0d7044c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Player.prefab using Guid(1a0c26a26beee3a49b8711c6c0d7044c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369bfbfa31a3ad012c863909a544dd44') in 0.008836 seconds
+  Import took 0.014334 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.451598 seconds.
+  path: Assets/Prefab/Player.prefab
+  artifactKey: Guid(1a0c26a26beee3a49b8711c6c0d7044c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Player.prefab using Guid(1a0c26a26beee3a49b8711c6c0d7044c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45582e2cf5aa646ff0928949c3067d93') in 0.013849 seconds
+  Import took 0.018970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 511.592863 seconds.
+  path: Assets/Scenes/Battle.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abfa220278561f4aa54e134db9554d6') in 0.006889 seconds
+  Import took 0.011482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 440.812248 seconds.
+  path: Assets/Scenes/Battle.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19761c7ef9fcb5d1cef0df33b5e6b09b') in 0.006163 seconds
+  Import took 0.010285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 524.710743 seconds.
+  path: Assets/Scenes/Battle.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8902f256e90955feed48878e6311e606') in 0.006956 seconds
+  Import took 0.011802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 820.763513 seconds.
+  path: Assets/Scenes/Battle.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a790327a9004f622d982257f80f40ead') in 0.006782 seconds
+  Import took 0.011604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 64.157009 seconds.
+  path: Assets/Scenes/Battle.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Battle.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd38bf930fcad7dadc99a8057ef34239f') in 0.006483 seconds
+  Import took 0.011741 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
