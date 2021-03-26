@@ -131,7 +131,7 @@ public class BattleSystem : MonoBehaviour
 		StartCoroutine(PlayerAttack());
 	}
 
-	public void OnHealButton()
+	public void OnTauntButton()
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
@@ -139,4 +139,15 @@ public class BattleSystem : MonoBehaviour
 		StartCoroutine(PlayerHeal());
 	}
 
+    public void OnFlirtButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+	}
+
+    public void OnGiveItemButton()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+	}
 }
