@@ -13,6 +13,7 @@ TagManager:
   - UI
   - 
   - 
+  - Player
   - 
   - 
   - 
@@ -24,10 +25,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -41,12 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 2026939585
+  - name: Ground
+    uniqueID: 2425651459
     locked: 0
-  - name: Foreground
-    uniqueID: 4293206445
+  - name: Walls
+    uniqueID: 4250941897
     locked: 0
-  - name: Props
-    uniqueID: 4090196309
+  - name: Shadow
+    uniqueID: 3994633435
+    locked: 0
+  - name: Prop
+    uniqueID: 4189426099
+    locked: 0
+  - name: Pole
+    uniqueID: 4005573629
+    locked: 0
+  - name: Player
+    uniqueID: 548677189
     locked: 0
