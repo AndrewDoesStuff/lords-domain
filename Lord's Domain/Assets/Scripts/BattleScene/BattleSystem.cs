@@ -60,16 +60,21 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator PlayerAttack()
     {
         DisableButtons();
+		// Scene changer HERE
 		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-
-		enemyHUD.SetHP(enemyUnit.currentHP);
 		dialogueText.text = "You attack him";
-
 		yield return new WaitForSeconds(1.5f);
-
-        dialogueText.text = "Dwayne: Ouch Ouch Ouch";
         
-		yield return new WaitForSeconds(1.5f);
+		// MINIGAME SUCCESS
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialogueText.text = enemyUnit.unitName +": Ouch Ouch Ouch";
+        // MINIGAME SUCCESS
+        
+        // MINIGAME FAILURE
+        dialogueText.text = enemyUnit.unitName + ": Well that tickled";
+        // MINIGAME FAILURE
+        
+        yield return new WaitForSeconds(1.5f);
         
         if (isDead)
 		{
@@ -113,6 +118,7 @@ public class BattleSystem : MonoBehaviour
 		if(state == BattleState.WON)
 		{
 			dialogueText.text = "You won the battle!";
+            // SCENE CHANGER TO 2D TOP DOWN HERE
 		} else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "You were defeated.";
@@ -124,44 +130,61 @@ public class BattleSystem : MonoBehaviour
 		dialogueText.text = "Choose an action:";
 	}
 
-	IEnumerator PlayerTalk() 
-	{
-		// playerUnit.Heal(5);
+	IEnumerator PlayerTalk()
+    {
+        DisableButtons();
+		// Scene changer HERE
+		dialogueText.text = "You begin conversation with " + enemyUnit.unitName;
 
-		// playerHUD.SetHP(playerUnit.currentHP);
-		DisableButtons();
-        dialogueText.text = "You begin conversation with " + enemyUnit.unitName;
+        yield return new WaitForSeconds(1.5f);
 
-		yield return new WaitForSeconds(1.5f);
 
+
+        // MINIGAME SUCCESS
+        dialogueText.text = enemyUnit.unitName + ": ...oh let me think on this";
+		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
+		if (isDead)
+        {
+            state = BattleState.WON;
+            EndBattle();
+        }
+		// MINIGAME SUCCESS
+
+		// MINIGAME FAILURE
 		dialogueText.text = "Dwayne: ...Oh interesting oh well still gonna punch you";
-
-		yield return new WaitForSeconds(1.5f);
-
+        yield return new WaitForSeconds(1.5f);
 		state = BattleState.ENEMYTURN;
-		StartCoroutine(EnemyTurn());
-	}
+        StartCoroutine(EnemyTurn());
+		// MINIGAME FAILURE
+
+    }
 
     IEnumerator PlayerFlee()
     {
         DisableButtons();
-        dialogueText.text = "You try to run from " + enemyUnit.unitName;
+		// Scene changer HERE
+		dialogueText.text = "You try to run from " + enemyUnit.unitName;
 
         yield return new WaitForSeconds(1.5f);
         
+        // MINIGAME SUCCESS
+        // Scene change to top down here
+        // MINIGAME SUCCESS
+        
+        // MINIGAME FAILURE
 		dialogueText.text = enemyUnit.unitName + ": running away?";
-
         yield return new WaitForSeconds(1.5f);
-        EnableButtons();
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
-	}
+        // MINIGAME FAILURE
+        
+    }
 
     IEnumerator PlayerGiveItem()
     {
         DisableButtons();
-		dialogueText.text = "Dwayne: Oh you gave me the item I asked for";
-		yield return new WaitForSeconds(1.5f);
+        dialogueText.text = "Dwayne: Oh you gave me the item I asked for";
+        yield return new WaitForSeconds(1.5f);
 
         state = BattleState.WON;
         EndBattle();
