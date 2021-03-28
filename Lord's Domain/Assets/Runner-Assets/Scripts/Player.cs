@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 7.5f;
+    public float speed = 100f;
     public int health = 3;
     private Vector2 movement;
-    public int movementInc = 5;
+    public int movementInc = 2;
     private float maxH;
     private float minH;
     void Start() {
@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, movement, speed * Time.deltaTime);
-        Debug.Log(transform.position.ToString());
         if(Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxH) { // we can change this in the future
             movement = new Vector2(transform.position.x, transform.position.y + movementInc);
 

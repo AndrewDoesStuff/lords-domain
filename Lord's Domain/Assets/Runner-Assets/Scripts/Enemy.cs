@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public int damage = 1;
+    public float speed;
+    void Update() {
+        transform.Translate(Vector2.left * speed * Time.deltaTime);
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D other) 
     {
-        
+        if(other.CompareTag("Player")) {
+            other.GetComponent<Player>().health -= damage;
+            Debug.Log(other.GetComponent<Player>().health);
+            Destroy(gameObject);
+        } 
     }
 }
