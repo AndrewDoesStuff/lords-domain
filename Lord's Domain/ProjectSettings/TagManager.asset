@@ -15,6 +15,7 @@ TagManager:
   - UI
   - 
   - 
+  - Player
   - 
   - 
   - 
@@ -26,10 +27,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Layer 1
+  - Layer 2
+  - Layer 3
   - 
   - 
   - 
@@ -42,4 +42,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2425651459
+    locked: 0
+  - name: Walls
+    uniqueID: 4250941897
+    locked: 0
+  - name: Shadow
+    uniqueID: 3994633435
+    locked: 0
+  - name: Prop
+    uniqueID: 4189426099
+    locked: 0
+  - name: Doors
+    uniqueID: 2573027187
+    locked: 0
+  - name: Pole
+    uniqueID: 4005573629
+    locked: 0
+  - name: Player
+    uniqueID: 548677189
     locked: 0

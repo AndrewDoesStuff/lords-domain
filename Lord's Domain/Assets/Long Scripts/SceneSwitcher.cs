@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class SceneSwitcher : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void OpenScene(int index)
+    public void OpenScene(string level)
     {
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(level);
     }
 
 }
