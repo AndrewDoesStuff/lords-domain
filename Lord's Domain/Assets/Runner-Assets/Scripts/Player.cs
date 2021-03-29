@@ -1,30 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
-    public float speed = 100f;
+    public float speed = 7.5f;
+    public Rigidbody2D rb;
     public int health = 3;
     private Vector2 movement;
-    public int movementInc = 2;
-    private float maxH;
-    private float minH;
+    private float oldSpeed;
+    private bool isBoosting;
     void Start() {
-        minH = movementInc * -1;
-        maxH = movementInc; 
-        // this is so it only goes up 3 times
+        oldSpeed = speed;
     }
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, movement, speed * Time.deltaTime);
-        if(Input.GetKeyDown(KeyCode.UpArrow) && transform.position.y < maxH) { // we can change this in the future
-            movement = new Vector2(transform.position.x, transform.position.y + movementInc);
-
-        }        
-        else if(Input.GetKeyDown(KeyCode.DownArrow) && transform.position.y > minH) { // we can change this in the future
-            movement = new Vector2(transform.position.x, transform.position.y - movementInc);
-        }
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        
+        // none of this works lol
+        // Debug.Log(health);
+        // if(Input.GetKeyDown(KeyCode.LeftShift)) {
+        //     isBoosting = true;
+        // }
+        // else if(Input.GetKeyUp(KeyCode.LeftShift)) {
+        //     isBoosting = false;
+        // }
+        // if(isBoosting) {
+        //     speed += 3; // how do i get this to run once and not every frame
+        // }
+        // else {
+        //     speed = oldSpeed;
+        // }
     }
+    void FixedUpdate() { 
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
+    }
+
 }
