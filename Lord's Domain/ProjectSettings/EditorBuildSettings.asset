@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DemoStart.unity
     guid: a6d3f56543a4d8049bb0f0f556086aaf
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/Battle.unity
+    guid: 70e991ee48c73c947905e930e004e16e
+  - enabled: 1
+    path: Assets/Scenes/Runner-MG.unity
+    guid: 4d53c99814e06304ba8a6d2429257468
   m_configObjects: {}

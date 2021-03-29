@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -172,8 +173,9 @@ public class BattleSystem : MonoBehaviour
         DisableButtons();
         dialogueText.text = "You try to run from " + enemyUnit.unitName;
         yield return new WaitForSeconds(1.5f);
-        
+
         // SCENE CHANGE GOES HERE
+        SceneManager.LoadScene("Runner-MG");
 
         // MINIGAME FAILURE
         dialogueText.text = enemyUnit.unitName + ": running away?";
