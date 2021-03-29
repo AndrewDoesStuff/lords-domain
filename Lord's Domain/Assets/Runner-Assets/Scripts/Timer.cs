@@ -11,9 +11,9 @@ public class Timer : MonoBehaviour
             timer -= Time.deltaTime;
         }        
         else {
-            Debug.Log("Timer Done!");
+            Debug.Log("You Win!");
             SceneManager.LoadScene("Runner-MG"); // resets the game, but we can change this in the future
         }
-        Debug.Log((int) timer);
+        // Debug.Log("Current Time: " + (int) timer);
     }
 }

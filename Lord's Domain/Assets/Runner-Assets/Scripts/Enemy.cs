@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int damage = 1;
+    // public AudioSource hitSound;
     public float speed;
     void Update() {
         transform.Translate(Vector2.left * speed * Time.deltaTime);
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour
         if(other.CompareTag("Player")) {
             other.GetComponent<Player>().health -= damage;
             Debug.Log(other.GetComponent<Player>().health);
+            // hitSound.Play();
             Destroy(gameObject);
         } 
     }
