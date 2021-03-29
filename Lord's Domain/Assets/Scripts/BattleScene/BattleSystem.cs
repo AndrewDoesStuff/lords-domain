@@ -71,7 +71,7 @@ public class BattleSystem : MonoBehaviour
         // MINIGAME SUCCESS
         
         // MINIGAME FAILURE
-        dialogueText.text = enemyUnit.unitName + ": Well that tickled";
+        // dialogueText.text = enemyUnit.unitName + ": Well that tickled";
         // MINIGAME FAILURE
         
         yield return new WaitForSeconds(1.5f);
@@ -92,13 +92,13 @@ public class BattleSystem : MonoBehaviour
 	{
 		dialogueText.text = enemyUnit.unitName + " attacks!";
 
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(1f);
 
 		bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
 		playerHUD.SetHP(playerUnit.currentHP);
 
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(1f);
 
 		if(isDead)
 		{
@@ -138,46 +138,50 @@ public class BattleSystem : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-
-
         // MINIGAME SUCCESS
-        dialogueText.text = enemyUnit.unitName + ": ...oh let me think on this";
+        dialogueText.text = enemyUnit.unitName + ": What you said is interesting let me think on it";
+
+        yield return new WaitForSeconds(1.5f);
 		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-		if (isDead)
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        if (isDead)
         {
             state = BattleState.WON;
             EndBattle();
         }
-		// MINIGAME SUCCESS
+        else
+        {
+            state = BattleState.PLAYERTURN;
+            PlayerTurn();
+            EnableButtons();
+        }
 
-		// MINIGAME FAILURE
-		dialogueText.text = "Dwayne: ...Oh interesting oh well still gonna punch you";
-        yield return new WaitForSeconds(1.5f);
-		state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
-		// MINIGAME FAILURE
+        // MINIGAME SUCCESS
+
+        // MINIGAME FAILURE
+        // dialogueText.text = "Dwayne: ...Oh interesting oh well still gonna punch you";
+        // yield return new WaitForSeconds(1.5f);
+        // state = BattleState.ENEMYTURN;
+        // StartCoroutine(EnemyTurn());
+        // MINIGAME FAILURE
 
     }
 
     IEnumerator PlayerFlee()
     {
         DisableButtons();
-		// Scene changer HERE
-		dialogueText.text = "You try to run from " + enemyUnit.unitName;
-
+        dialogueText.text = "You try to run from " + enemyUnit.unitName;
         yield return new WaitForSeconds(1.5f);
         
-        // MINIGAME SUCCESS
-        // Scene change to top down here
-        // MINIGAME SUCCESS
-        
+        // SCENE CHANGE GOES HERE
+
         // MINIGAME FAILURE
-		dialogueText.text = enemyUnit.unitName + ": running away?";
+        dialogueText.text = enemyUnit.unitName + ": running away?";
         yield return new WaitForSeconds(1.5f);
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());
         // MINIGAME FAILURE
-        
+
     }
 
     IEnumerator PlayerGiveItem()
