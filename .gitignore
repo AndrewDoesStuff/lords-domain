@@ -42,4 +42,8 @@ Thumbs.db
 
 ## VsCode Stuff
 .vscode
+<<<<<<< HEAD
 *.log
+=======
+*.log
+>>>>>>> main
