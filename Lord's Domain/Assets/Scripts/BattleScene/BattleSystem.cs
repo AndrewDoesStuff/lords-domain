@@ -114,13 +114,17 @@ public class BattleSystem : MonoBehaviour
 
 	}
 
-	void EndBattle()
+    void EndBattle()
 	{
 		if(state == BattleState.WON)
 		{
+            
 			dialogueText.text = "You won the battle!";
             // SCENE CHANGER TO 2D TOP DOWN HERE
-		} else if (state == BattleState.LOST)
+            StartCoroutine(Wait());
+            //SceneManager.LoadScene("DemoStart");
+        }
+        else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "You were defeated.";
 		}
@@ -130,6 +134,13 @@ public class BattleSystem : MonoBehaviour
 	{
 		dialogueText.text = "Choose an action:";
 	}
+
+    //Change to WaitToScene(int time, string Scene)
+    IEnumerator Wait ()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("DemoStart");
+    }
 
 	IEnumerator PlayerTalk()
     {
@@ -190,10 +201,12 @@ public class BattleSystem : MonoBehaviour
     {
         DisableButtons();
         dialogueText.text = "Dwayne: Oh you gave me the item I asked for";
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
 
         state = BattleState.WON;
         EndBattle();
+        //yield return new WaitForSeconds(3f);
+        //SceneManager.LoadScene("Demostart");
     }
 	public void OnAttackButton()
     {

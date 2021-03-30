@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
         }        
         else {
             Debug.Log("You Win!");
-            SceneManager.LoadScene("Runner-MG"); // resets the game, but we can change this in the future
+            SceneManager.LoadScene("DemoStart"); // resets the game, but we can change this in the future
         }
         // Debug.Log("Current Time: " + (int) timer);
     }
