@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -57032,6 +57032,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2127871480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2984754983559642880, guid: ccfb6d95077d30e46b726c95f13cfbd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2984754982237824266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2127871481
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127871480}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec1445d2003f943708f15afd004dcff0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &2984754982237824266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57099,6 +57124,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2984754983559642884, guid: ccfb6d95077d30e46b726c95f13cfbd9,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 2127871481}
+    - target: {fileID: 2984754983559642886, guid: ccfb6d95077d30e46b726c95f13cfbd9,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984754983559642886, guid: ccfb6d95077d30e46b726c95f13cfbd9,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a7432ac8e055b9448fad903638b0c24,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccfb6d95077d30e46b726c95f13cfbd9, type: 3}
 --- !u!1001 &3624141513205251843
