@@ -26,12 +26,12 @@ public class TopDownPlayerMovement : MonoBehaviour
             animator.SetTrigger("GoLeft");
         }
         
-        if (dir.y > 0)
+        if (dir.y > 0 && dir.x == 0)
         {
             animator.SetTrigger("GoUp");
         }
         
-        if (dir.y < 0)
+        if (dir.y < 0 && dir.x == 0)
         {
             animator.SetTrigger("Normal");
         }
