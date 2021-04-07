@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TopDownDialogue : MonoBehaviour
 {
+    public GameObject storeInterface;
     private bool dialogue_flag = false;
     private GameObject closet_ob;
     private float closet_distance;
@@ -12,23 +13,30 @@ public class TopDownDialogue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!dialogue_flag)
+            if ((GameObject.Find("Store").transform.position - transform.position).sqrMagnitude < 3)
             {
-                (closet_ob, closet_distance) = FindClosestEnemy();
-                Debug.Log("Distance:" + closet_distance);
-                if (closet_distance < 3)
-                {
-                    DialogueTrigger script1 = closet_ob.GetComponent<DialogueTrigger>();
-                    script1.TriggerDialogue();
-                    dialogue_flag = true;
-                }
+                storeInterface.SetActive(true);
             }
             else
             {
-                DialogueManager script2 = GetComponent<DialogueManager>();
-                if (script2.DisplayNextSentence())
+                if (!dialogue_flag)
                 {
-                    dialogue_flag = false;
+                    (closet_ob, closet_distance) = FindClosestEnemy();
+                    Debug.Log("Distance:" + closet_distance);
+                    if (closet_distance < 3 && closet_ob.GetComponent<DialogueTrigger>() != null)
+                    {
+                        DialogueTrigger script1 = closet_ob.GetComponent<DialogueTrigger>();
+                        script1.TriggerDialogue();
+                        dialogue_flag = true;
+                    }
+                }
+                else
+                {
+                    DialogueManager script2 = GetComponent<DialogueManager>();
+                    if (script2.DisplayNextSentence())
+                    {
+                        dialogue_flag = false;
+                    }
                 }
             }
         }
@@ -52,5 +60,10 @@ public class TopDownDialogue : MonoBehaviour
             }
         }
         return (closest, distance);
+    }
+
+    public void disableStoreInterface()
+    {
+        storeInterface.SetActive(false);
     }
 }
