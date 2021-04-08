@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TopDownPlayerMovement : MonoBehaviour
 {
+    private bool movableFlag = true;
     public Animator animator;
     public Rigidbody2D rigidBody;
     public float runSpeed = 10f;
@@ -40,6 +41,14 @@ public class TopDownPlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //Movement
-        rigidBody.MovePosition(rigidBody.position + dir * runSpeed * Time.fixedDeltaTime);
+        if (movableFlag)
+        {
+            rigidBody.MovePosition(rigidBody.position + dir * runSpeed * Time.fixedDeltaTime);
+        }
+    }
+
+    public void setMovableFlat(bool value)
+    {
+        movableFlag = value;
     }
 }
