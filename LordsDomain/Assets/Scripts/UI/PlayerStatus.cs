@@ -10,8 +10,8 @@ public class PlayerStatus : MonoBehaviour
     public Text damageText;
 	public Text moneyText;
 
-	public int maxHealth;
-	public int maxDamage;
+	public int healthLimit;
+	public int damageLimit;
 
 	public int health;
     public int damage;
@@ -19,8 +19,8 @@ public class PlayerStatus : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		maxHealth = 50;
-		maxDamage = 100;
+	    healthLimit = 50;
+	    damageLimit = 100;
         health = 30;
 		damage = 10;
 		money = 100;
@@ -30,20 +30,20 @@ public class PlayerStatus : MonoBehaviour
     // Update is called once per frame
     public void updatePlayerStatus()
     {
-        healthText.text = health.ToString();
-		damageText.text = damage.ToString();
+        healthText.text = health.ToString()+"/"+ healthLimit.ToString();
+		damageText.text = damage.ToString()+"/"+ damageLimit.ToString();
 		moneyText.text = money.ToString();
     }
 
 	public bool addHealth(int value)
 	{
-		if(health == maxHealth)
+		if(health == healthLimit)
 		{
 			return false;
 		}
 		else
 		{
-			health = Math.Min(health+value, maxHealth);
+			health = Math.Min(health+value, healthLimit);
 			updatePlayerStatus();
 			return true;
 		}
@@ -51,13 +51,13 @@ public class PlayerStatus : MonoBehaviour
 
 	public bool addDamage(int value)
 	{
-		if(damage == maxDamage)
+		if(damage == damageLimit)
 		{
 			return false;
 		}
 		else
 		{
-			damage = Math.Min(damage+value, maxDamage);
+			damage = Math.Min(damage+value, damageLimit);
 			updatePlayerStatus();
 			return true;
 		}
