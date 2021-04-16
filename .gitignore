@@ -40,7 +40,9 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-## VsCode Stuff
+###
+# VsCode Stuff
+###
 .vscode
-demo-level
+.vsconfig
 *.log

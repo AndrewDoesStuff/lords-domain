@@ -8,19 +8,19 @@ Our game concept is a 2D top-down game, that is about an apprentice wizard tryin
 
 - [x] Menu /w Start, continue, options
 - [ ] First Level
-- [ ] Controllable Player
-- [ ] Enemies
-- [ ] Fighting System
+- [X] Controllable Player
+- [X] Enemies
+- [X] Fighting System
 - [ ] Dialogue System
-- [ ] Mini-Games
+- [ ] Fleeing Minigame
 
 ## Art Checklist
 
-- [ ] Main Character Design
-- [ ] Greg Design
-- [ ] Enemy Design 1
-- [ ] Enemy Design 2
-- [ ] Enemy Design 3
+- [x] Main Character Design
+- [x] Greg Design
+- [x] Enemy Design 1
+- [x] Enemy Design 2
+- [x] Enemy Design 3
 - [ ] Enemy Design 4
 - [ ] Enemy Design 5
 
