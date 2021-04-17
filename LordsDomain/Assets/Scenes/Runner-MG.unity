@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 177586445}
   - component: {fileID: 177586446}
   - component: {fileID: 177586448}
-  - component: {fileID: 177586447}
   - component: {fileID: 177586444}
   m_Layer: 0
   m_Name: Player
@@ -236,7 +235,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006345436, y: 0}
+  m_Offset: {x: -0.006345451, y: 0.058668986}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -247,7 +246,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.538473, y: 0.64}
+  m_Size: {x: 0.538473, y: 0.7573379}
   m_EdgeRadius: 0
 --- !u!50 &177586446
 Rigidbody2D:
@@ -270,19 +269,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &177586447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177586441}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87f48692ea59bee4ab9f0e02291add33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCamera: {fileID: 1832886474}
 --- !u!114 &177586448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0865c22ca93ac2241a7168bb09b654ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTimeBtwSpawns: 1.75
+  startTimeBtwSpawns: 1
   timeDecrease: 0.05
   minTime: 0.65
   patterns:
@@ -516,7 +502,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

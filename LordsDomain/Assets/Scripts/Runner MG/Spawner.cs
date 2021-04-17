@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour {
 
     private float timeBtwSpawns;
-    public float startTimeBtwSpawns;
+    public float startTimeBtwSpawns = 1.25f;
     public float timeDecrease;
     public float minTime;
 

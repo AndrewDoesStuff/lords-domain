@@ -43,6 +43,5 @@ Thumbs.db
 ###
 # VsCode Stuff
 ###
-.vscode
-.vsconfig
+.vs*
 *.log
