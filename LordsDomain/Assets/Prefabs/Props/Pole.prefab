@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5659860073913089519}
   - component: {fileID: 5659860073913089516}
   - component: {fileID: 5659860073913089517}
-  - component: {fileID: 5659860073913089514}
   m_Layer: 0
   m_Name: Pole
   m_TagString: Untagged
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548677189
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -1408617095229946486, guid: d21555ce72e390f49ba41fd54c373b1b,
     type: 3}
@@ -111,17 +110,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7914295, y: 1.7439051}
   m_EdgeRadius: 0
---- !u!114 &5659860073913089514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5659860073913089515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9075ea9a399198446933d9794d24cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 500
-  renderer: {fileID: 0}

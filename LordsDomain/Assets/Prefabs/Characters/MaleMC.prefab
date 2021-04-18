@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2984754983559642906}
   - component: {fileID: 2984754983559642885}
   - component: {fileID: 2984754983559642884}
-  - component: {fileID: 2984754983559642887}
   m_Layer: 8
   m_Name: MaleMC
   m_TagString: Untagged
@@ -148,17 +147,3 @@ MonoBehaviour:
   animator: {fileID: 0}
   rigidBody: {fileID: 2984754983559642906}
   runSpeed: 10
---- !u!114 &2984754983559642887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2984754983559642880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9075ea9a399198446933d9794d24cfd1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingOrderBase: 500
-  renderer: {fileID: 0}

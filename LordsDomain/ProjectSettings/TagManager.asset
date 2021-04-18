@@ -55,6 +55,9 @@ TagManager:
   - name: Prop
     uniqueID: 4189426099
     locked: 0
+  - name: Solid Props
+    uniqueID: 283041507
+    locked: 0
   - name: Doors
     uniqueID: 2573027187
     locked: 0

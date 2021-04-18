@@ -1007,6 +1007,24 @@ TextureImporter:
   - first:
       213: -6264482591300503568
     second: TX Plant_246
+  - first:
+      213: 6276597333099341285
+    second: TX Plant_247
+  - first:
+      213: -6532358178249565560
+    second: TX Plant_248
+  - first:
+      213: 1061768311230184416
+    second: TX Plant_249
+  - first:
+      213: 5785456591583235329
+    second: TX Plant_250
+  - first:
+      213: 8442849111746644577
+    second: TX Plant_251
+  - first:
+      213: -1494427782927363638
+    second: TX Plant_252
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -6269,8 +6287,8 @@ TextureImporter:
         y: 353
         width: 121
         height: 150
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4832094, y: 0.30891743}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -6278,6 +6296,132 @@ TextureImporter:
       bones: []
       spriteID: 0f73aeb16461019a0800000000000000
       internalID: -6264482591300503568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_247
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 286
+        width: 39
+        height: 35
+      alignment: 9
+      pivot: {x: 0.48866713, y: 0.41581246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5ec850504fa1750800000000000000
+      internalID: 6276597333099341285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_248
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 287
+        width: 36
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5040925, y: 0.37371826}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88a11d7c8d66855a0800000000000000
+      internalID: -6532358178249565560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_249
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 286
+        width: 40
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5478813, y: 0.3565489}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb34a057a82cbe00800000000000000
+      internalID: 1061768311230184416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_250
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 284
+        width: 49
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4939865, y: 0.34285006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10dc2cc0e121a4050800000000000000
+      internalID: 5785456591583235329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_251
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 280
+        width: 42
+        height: 47
+      alignment: 9
+      pivot: {x: 0.56314015, y: 0.39342222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a81e5f8860b2570800000000000000
+      internalID: 8442849111746644577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Plant_252
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 286
+        width: 42
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5210462, y: 0.36904144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac1d32869d9b24be0800000000000000
+      internalID: -1494427782927363638
       vertices: []
       indices: 
       edges: []
