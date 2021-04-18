@@ -55,11 +55,14 @@ TagManager:
   - name: Shadow
     uniqueID: 3994633435
     locked: 0
+  - name: Solid Props
+    uniqueID: 283041507
+    locked: 0
   - name: Prop
     uniqueID: 4189426099
     locked: 0
-  - name: Solid Props
-    uniqueID: 283041507
+  - name: Small Objects
+    uniqueID: 1240696297
     locked: 0
   - name: Doors
     uniqueID: 2573027187
