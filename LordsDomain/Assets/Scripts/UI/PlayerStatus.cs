@@ -28,6 +28,10 @@ public class PlayerStatus : MonoBehaviour
     {
 		if (!LoadPlayerStatus ())
 		{
+			if (StaticVariables.playerName == null)
+			{
+				StaticVariables.playerName = "Stranger";
+			}
 			name = StaticVariables.playerName;
 	    	healthLimit = 50;
 	    	damageLimit = 100;

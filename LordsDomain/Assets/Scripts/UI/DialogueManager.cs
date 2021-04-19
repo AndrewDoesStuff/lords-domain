@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+		sentence = sentence.Replace("@", StaticVariables.playerName);
         dialogueText.text = sentence;
 
         return false;
