@@ -7,12 +7,12 @@ Our game concept is a 2D top-down game, that is about an apprentice wizard tryin
 ## UI Scripting Checklist
 
 - [x] Menu /w Start, continue, options
-- [ ] First Level
+- [x] First Level
 - [X] Controllable Player
 - [X] Enemies
 - [X] Fighting System
-- [ ] Dialogue System
-- [ ] Fleeing Minigame
+- [X] Dialogue System
+- [X] Fleeing Minigame
 
 ## Art Checklist
 
@@ -21,11 +21,9 @@ Our game concept is a 2D top-down game, that is about an apprentice wizard tryin
 - [x] Enemy Design 1
 - [x] Enemy Design 2
 - [x] Enemy Design 3
-- [ ] Enemy Design 4
-- [ ] Enemy Design 5
 
 ## Optional
 
 - [ ] Team-Created Art Assets
 - [ ] Hand-Made Music
-- [ ] More Minigames
+- [X] More Minigames
