@@ -22,7 +22,7 @@ public class TopDownDialogue : MonoBehaviour
 			paused_flag = true;
 		}
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if ((GameObject.Find("Store").transform.position - transform.position).sqrMagnitude < 3)
             {
