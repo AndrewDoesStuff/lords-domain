@@ -145,4 +145,13 @@ public class PlayerStatus : MonoBehaviour
 			return false;
 		}
 	}
+
+	public bool TakeDamage(int dmg) {
+        health -= dmg;
+
+        if (health <= 0)
+            return true;
+        else
+            return false;
+    }
 }

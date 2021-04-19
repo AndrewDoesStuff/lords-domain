@@ -109,6 +109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6709097373945069960}
   - component: {fileID: -4134095188537867028}
+  - component: {fileID: 3834163085304664518}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -147,3 +148,29 @@ MonoBehaviour:
   damage: 5
   maxHP: 50
   currentHP: 50
+--- !u!114 &3834163085304664518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5378518889554071624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8496e73c6283347ae80c3c04af0d111a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 
+  name: Bonesy
+  healthText: {fileID: 0}
+  damageText: {fileID: 0}
+  moneyText: {fileID: 0}
+  healthLimit: 0
+  damageLimit: 0
+  health: 50
+  damage: 5
+  money: 0
+  maxHealth: 50
+  maxDamage: 0
+  maxMoney: 0
+  maxPoints: 0

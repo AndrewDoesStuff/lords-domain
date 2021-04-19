@@ -154,7 +154,7 @@ public class Snake : MonoBehaviour {
             
             transform.position = new Vector3(gridPosition.x, gridPosition.y);
             // This is the direction that the sprite is facing - or + 90 to GetAngleFromVector function;
-            transform.eulerAngles = new Vector3(0, 0, GetAngleFromVector(gridMoveDirectionVector) - 90);
+            transform.eulerAngles = new Vector3(0, 0, GetAngleFromVector(gridMoveDirectionVector) );
 
         }
     }
