@@ -35,7 +35,7 @@ public class PlayerStatus : MonoBehaviour
 			name = StaticVariables.playerName;
 	    	healthLimit = 50;
 	    	damageLimit = 100;
-        	health = 30;
+        	health = 50;
 			damage = 10;
 			money = 100;
 		}

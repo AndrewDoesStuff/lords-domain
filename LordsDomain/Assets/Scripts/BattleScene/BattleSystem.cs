@@ -21,7 +21,7 @@ public class BattleSystem : MonoBehaviour
     public Button giveItemButton;
     
 	PlayerStatus playerUnit;
-	PlayerStatus enemyUnit;
+	Unit enemyUnit;
     
 
 	public Text dialogueText;
@@ -45,11 +45,12 @@ public class BattleSystem : MonoBehaviour
 		playerUnit = playerGO.GetComponent<PlayerStatus>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
-		enemyUnit = enemyGO.GetComponent<PlayerStatus>();
+		enemyUnit = enemyGO.GetComponent<Unit>();
 
-		dialogueText.text = enemyUnit.name + " approaches...";
+		dialogueText.text = enemyUnit.unitName + " approaches...";
 
 		playerHUD.SetHUD(playerUnit);
+        Debug.Log("Player health is = " + playerUnit.health);
 		enemyHUD.SetHUD(enemyUnit);
 
 		yield return new WaitForSeconds(1.5f);
@@ -67,8 +68,8 @@ public class BattleSystem : MonoBehaviour
 		yield return new WaitForSeconds(1.5f);
         
 		// MINIGAME SUCCESS
-        enemyHUD.SetHP(enemyUnit.health);
-        dialogueText.text = enemyUnit.name +": Ouch Ouch Ouch";
+        enemyHUD.SetHP(enemyUnit.currentHP);
+        dialogueText.text = enemyUnit.unitName +": Ouch Ouch Ouch";
         // MINIGAME SUCCESS
         
         // MINIGAME FAILURE
@@ -91,7 +92,7 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator EnemyTurn()
 	{
-		dialogueText.text = enemyUnit.name + " attacks!";
+		dialogueText.text = enemyUnit.unitName + " attacks!";
 
 		yield return new WaitForSeconds(1f);
 
@@ -146,16 +147,16 @@ public class BattleSystem : MonoBehaviour
     {
         DisableButtons();
 		// Scene changer HERE
-		dialogueText.text = "You begin conversation with " + enemyUnit.name;
+		dialogueText.text = "You begin conversation with " + enemyUnit.unitName;
 
         yield return new WaitForSeconds(1.5f);
 
         // MINIGAME SUCCESS
-        dialogueText.text = enemyUnit.name + ": What you said is interesting let me think on it";
+        dialogueText.text = enemyUnit.unitName + ": What you said is interesting let me think on it";
 
         yield return new WaitForSeconds(1.5f);
 		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-        enemyHUD.SetHP(enemyUnit.health);
+        enemyHUD.SetHP(enemyUnit.currentHP);
         if (isDead)
         {
             state = BattleState.WON;
@@ -182,14 +183,14 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerFlee()
     {
         DisableButtons();
-        dialogueText.text = "You try to run from " + enemyUnit.name;
+        dialogueText.text = "You try to run from " + enemyUnit.unitName;
         yield return new WaitForSeconds(1.5f);
 
         // SCENE CHANGE GOES HERE
         SceneManager.LoadScene("Runner-MG");
 
         // MINIGAME FAILURE
-        dialogueText.text = enemyUnit.name + ": running away?";
+        dialogueText.text = enemyUnit.unitName + ": running away?";
         yield return new WaitForSeconds(1.5f);
         state = BattleState.ENEMYTURN;
         StartCoroutine(EnemyTurn());

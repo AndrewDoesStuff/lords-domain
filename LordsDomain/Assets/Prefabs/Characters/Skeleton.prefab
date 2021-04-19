@@ -165,12 +165,12 @@ MonoBehaviour:
   healthText: {fileID: 0}
   damageText: {fileID: 0}
   moneyText: {fileID: 0}
-  healthLimit: 0
+  healthLimit: 50
   damageLimit: 0
   health: 50
   damage: 5
   money: 0
-  maxHealth: 50
+  maxHealth: 0
   maxDamage: 0
   maxMoney: 0
   maxPoints: 0
