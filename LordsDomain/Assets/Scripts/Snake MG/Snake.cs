@@ -145,7 +145,7 @@ public class Snake : MonoBehaviour {
                 }
             }
 
-            if (GameHandler.GetScore() == 500)
+            if (GameHandler.GetScore() == 1500)
             {
                 // Win Section
                 CMDebug.TextPopup("WIN!", transform.position);
