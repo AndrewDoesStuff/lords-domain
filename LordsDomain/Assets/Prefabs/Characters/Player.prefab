@@ -92,6 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7996493806225339104}
   - component: {fileID: 7394682834974895295}
+  - component: {fileID: 4011101399235023478}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,3 +131,29 @@ MonoBehaviour:
   damage: 10
   maxHP: 30
   currentHP: 30
+--- !u!114 &4011101399235023478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738837410130289440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8496e73c6283347ae80c3c04af0d111a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentTime: 
+  name: You
+  healthText: {fileID: 0}
+  damageText: {fileID: 0}
+  moneyText: {fileID: 0}
+  healthLimit: 50
+  damageLimit: 0
+  health: 50
+  damage: 10
+  money: 0
+  maxHealth: 0
+  maxDamage: 0
+  maxMoney: 0
+  maxPoints: 0

@@ -20,7 +20,7 @@ public class BattleSystem : MonoBehaviour
     public Button fleeButton;
     public Button giveItemButton;
     
-	Unit playerUnit;
+	PlayerStatus playerUnit;
 	Unit enemyUnit;
     
 
@@ -42,7 +42,7 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator SetupBattle()
 	{
 		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
-		playerUnit = playerGO.GetComponent<Unit>();
+		playerUnit = playerGO.GetComponent<PlayerStatus>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
 		enemyUnit = enemyGO.GetComponent<Unit>();
@@ -50,6 +50,7 @@ public class BattleSystem : MonoBehaviour
 		dialogueText.text = enemyUnit.unitName + " approaches...";
 
 		playerHUD.SetHUD(playerUnit);
+        Debug.Log("Player health is = " + playerUnit.health);
 		enemyHUD.SetHUD(enemyUnit);
 
 		yield return new WaitForSeconds(1.5f);
@@ -97,7 +98,7 @@ public class BattleSystem : MonoBehaviour
 
 		bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
 
-		playerHUD.SetHP(playerUnit.currentHP);
+		playerHUD.SetHP(playerUnit.health);
 
 		yield return new WaitForSeconds(1f);
 

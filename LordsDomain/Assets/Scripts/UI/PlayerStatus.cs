@@ -35,7 +35,7 @@ public class PlayerStatus : MonoBehaviour
 			name = StaticVariables.playerName;
 	    	healthLimit = 50;
 	    	damageLimit = 100;
-        	health = 30;
+        	health = 50;
 			damage = 10;
 			money = 100;
 		}
@@ -145,4 +145,13 @@ public class PlayerStatus : MonoBehaviour
 			return false;
 		}
 	}
+
+	public bool TakeDamage(int dmg) {
+        health -= dmg;
+
+        if (health <= 0)
+            return true;
+        else
+            return false;
+    }
 }
