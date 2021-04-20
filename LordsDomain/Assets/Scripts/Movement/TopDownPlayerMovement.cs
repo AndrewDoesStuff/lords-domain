@@ -17,25 +17,25 @@ public class TopDownPlayerMovement : MonoBehaviour
         dir.x = Input.GetAxisRaw("Horizontal");
         dir.y = Input.GetAxisRaw("Vertical");
 
-        if (dir.x > 0)
-        {
+        if (dir.x > 0) {
             animator.SetTrigger("GoRight");
         }
-        
-        if (dir.x < 0)
-        {
+
+        if (dir.x < 0) {
             animator.SetTrigger("GoLeft");
         }
-        
-        if (dir.y > 0 && dir.x == 0)
-        {
+
+        if (dir.y > 0 && dir.x == 0) {
             animator.SetTrigger("GoUp");
         }
-        
-        if (dir.y < 0 && dir.x == 0)
-        {
+
+        if (dir.y < 0 && dir.x == 0) {
             animator.SetTrigger("Normal");
         }
+
+        animator.SetFloat("Horizontal", dir.x);
+        animator.SetFloat("Vertical", dir.y);
+        animator.SetFloat("Speed", dir.magnitude);
     }
 
     private void FixedUpdate()
