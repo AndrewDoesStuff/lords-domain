@@ -10,6 +10,8 @@ public class EnemeyInteraction : MonoBehaviour
         //Debug.Log("Entered Trigger");
         if (Input.GetKey(KeyCode.E))
         {
+            //Remember upon completion, loads previous save state
+            GameObject.Find("MaleMC").GetComponent<PlayerStatus>().SavePlayerStatus();
             SceneManager.LoadScene("Battle");
             Debug.Log("E Pressed");
         }
