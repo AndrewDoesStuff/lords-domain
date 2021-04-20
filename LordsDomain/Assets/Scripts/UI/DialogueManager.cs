@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Animator animator;
     public Queue<string> sentences;
+    public string sceneText;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,15 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        //Save State
+        GameObject.Find("MaleMC").GetComponent<PlayerStatus>().SavePlayerStatus();
+
         animator.SetBool("IsOpen", true);
         
         nameText.text = dialogue.name;
+        //Scene Changer
+        sceneText = dialogue.scene;
+        
 
         sentences.Clear();
 
@@ -49,5 +57,12 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        //Scene Changer
+        if (sceneText != null)
+        {
+            Debug.Log(sceneText);
+            SceneManager.LoadScene(sceneText);
+        }
+        
     }
 }

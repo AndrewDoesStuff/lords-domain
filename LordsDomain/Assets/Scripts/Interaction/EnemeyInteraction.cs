@@ -12,7 +12,7 @@ public class EnemeyInteraction : MonoBehaviour
         {
             //Remember upon completion, loads previous save state
             GameObject.Find("MaleMC").GetComponent<PlayerStatus>().SavePlayerStatus();
-            SceneManager.LoadScene("Battle");
+            //SceneManager.LoadScene("Battle");
             Debug.Log("E Pressed");
         }
     }
