@@ -1501,16 +1501,15 @@ MonoBehaviour:
     type: 3}
   enemyPrefab: {fileID: 5378518889554071624, guid: 883b0045e37706543a4a1ed002c0c2bf,
     type: 3}
-  playerBattleStation: {fileID: 1080826007}
-  enemyBattleStation: {fileID: 1751222928}
-  attackButton: {fileID: 219922828}
-  talkButton: {fileID: 557852359}
-  fleeButton: {fileID: 1768937448}
-  giveItemButton: {fileID: 1903086390}
-  dialogueText: {fileID: 1829637496}
-  playerHUD: {fileID: 414788409}
-  enemyHUD: {fileID: 1845671402}
   state: 0
+  startQuip: You try and start up a conversation with
+  damageQuips:
+  - Ouch Ouch Ouch!
+  - You're rustling my bones!
+  - That's my sensitive spot!
+  dialogue:
+  - what it do
+  - what it do again!
 --- !u!1 &1132957848
 GameObject:
   m_ObjectHideFlags: 0
