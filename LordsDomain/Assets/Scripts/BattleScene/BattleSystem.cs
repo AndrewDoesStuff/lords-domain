@@ -12,29 +12,40 @@ public class BattleSystem : MonoBehaviour
 	public GameObject playerPrefab;
 	public GameObject enemyPrefab;
 
-    public Transform playerBattleStation;
-	public Transform enemyBattleStation;
+    private Transform playerBattleStation;
+	private Transform enemyBattleStation;
 
-    public Button attackButton;
-    public Button talkButton;
-    public Button fleeButton;
-    public Button giveItemButton;
+    private Button attackButton;
+    private Button talkButton;
+    private Button fleeButton;
+    private Button giveItemButton;
     
 	PlayerStatus playerUnit;
 	Unit enemyUnit;
     
 
-	public Text dialogueText;
+	private Text dialogueText;
     
-    public BattleHUD playerHUD;
-	public BattleHUD enemyHUD;
+    private BattleHUD playerHUD;
+	private BattleHUD enemyHUD;
     
 	public BattleState state;
+    public string startQuip;
+    public string[] damageQuips = {"Ouch Ouch Ouch!"};
+    public string[] dialogue;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        attackButton = GameObject.Find("AttackButton").GetComponent<Button>();
+        talkButton = GameObject.Find("TalkButton").GetComponent<Button>();
+        fleeButton = GameObject.Find("FleeButton").GetComponent<Button>();
+        giveItemButton = GameObject.Find("GiveItemButton").GetComponent<Button>();
+        dialogueText = GameObject.Find("DialogueText").GetComponent<Text>();
+        playerHUD = GameObject.Find("PlayerBattleHud").GetComponent<BattleHUD>();
+        enemyHUD = GameObject.Find("EnemyBattleHud").GetComponent<BattleHUD>();        
+        playerBattleStation = GameObject.Find("PlayerBattleStation").GetComponent<Transform>();
+        enemyBattleStation = GameObject.Find("EnemyBattleStation").GetComponent<Transform>();
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
     }
@@ -69,7 +80,7 @@ public class BattleSystem : MonoBehaviour
         
 		// MINIGAME SUCCESS
         enemyHUD.SetHP(enemyUnit.currentHP);
-        dialogueText.text = enemyUnit.unitName +": Ouch Ouch Ouch";
+        dialogueText.text = enemyUnit.unitName +": " + damageQuips[Random.Range(0, damageQuips.Length)];
         // MINIGAME SUCCESS
         
         // MINIGAME FAILURE
@@ -147,14 +158,16 @@ public class BattleSystem : MonoBehaviour
     {
         DisableButtons();
 		// Scene changer HERE
-		dialogueText.text = "You begin conversation with " + enemyUnit.unitName;
+		dialogueText.text = startQuip +  " " + enemyUnit.unitName;
 
         yield return new WaitForSeconds(1.5f);
 
         // MINIGAME SUCCESS
-        dialogueText.text = enemyUnit.unitName + ": What you said is interesting let me think on it";
+        foreach(string i in dialogue) { 
+            dialogueText.text = enemyUnit.unitName + ": " + i;
+            yield return new WaitForSeconds(1.5f);
+        }
 
-        yield return new WaitForSeconds(1.5f);
 		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
         enemyHUD.SetHP(enemyUnit.currentHP);
         if (isDead)
@@ -201,7 +214,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerGiveItem()
     {
         DisableButtons();
-        dialogueText.text = "Dwayne: Oh you gave me the item I asked for";
+        dialogueText.text = enemyUnit.unitName + ": Oh you gave me the item I asked for";
         yield return new WaitForSeconds(2.5f);
 
         state = BattleState.WON;
