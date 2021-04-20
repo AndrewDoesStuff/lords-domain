@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CodeMonkey;
 using CodeMonkey.Utils;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Snake : MonoBehaviour {
@@ -55,9 +56,11 @@ public class Snake : MonoBehaviour {
                 break;
             // Scene back to main goes here
             case State.Dead:
+                SceneManager.LoadScene("BattleGhost");
                 break;
             // Scene change
             case State.Win:
+                SceneManager.LoadScene("DemoStart");
                 break;
         }
 
@@ -142,6 +145,7 @@ public class Snake : MonoBehaviour {
                     // Game Over section
                     CMDebug.TextPopup("DEAD!", transform.position);
                     state = State.Dead;
+
                 }
             }
 

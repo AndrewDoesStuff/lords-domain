@@ -247,10 +247,14 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2407801855404995966, guid: 920a1e9310a26c649afee7001b33c0b3,
     type: 3}
   state: 0
-  startQuip: 
+  fleeMiniGame: Snake-MG
+  startQuip: spooky
   damageQuips:
   - Ouch Ouch Ouch!
-  dialogue: []
+  talkDialogue:
+  - u guys want to see me be scary
+  - ooooooooooooooooooooOOOooo
+  - <i>that's all i got sorry</i>
 --- !u!4 &122199067
 Transform:
   m_ObjectHideFlags: 0

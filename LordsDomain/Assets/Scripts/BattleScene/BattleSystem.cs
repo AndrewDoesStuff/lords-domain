@@ -30,10 +30,10 @@ public class BattleSystem : MonoBehaviour
 	private BattleHUD enemyHUD;
     
 	public BattleState state;
+    public string fleeMiniGame;
     public string startQuip;
     public string[] damageQuips = {"Ouch Ouch Ouch!"};
-    public string[] dialogue;
-
+    public string[] talkDialogue;
     // Start is called before the first frame update
     void Start()
     {
@@ -158,12 +158,12 @@ public class BattleSystem : MonoBehaviour
     {
         DisableButtons();
 		// Scene changer HERE
-		dialogueText.text = startQuip +  " " + enemyUnit.unitName;
+		dialogueText.text = enemyUnit.unitName + ": " + startQuip;
 
         yield return new WaitForSeconds(1.5f);
 
         // MINIGAME SUCCESS
-        foreach(string i in dialogue) { 
+        foreach(string i in talkDialogue) { 
             dialogueText.text = enemyUnit.unitName + ": " + i;
             yield return new WaitForSeconds(1.5f);
         }
@@ -200,7 +200,7 @@ public class BattleSystem : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
 
         // SCENE CHANGE GOES HERE
-        SceneManager.LoadScene("Runner-MG");
+        SceneManager.LoadScene(fleeMiniGame);
 
         // MINIGAME FAILURE
         dialogueText.text = enemyUnit.unitName + ": running away?";

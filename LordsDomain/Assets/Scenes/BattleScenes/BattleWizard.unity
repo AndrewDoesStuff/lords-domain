@@ -247,10 +247,16 @@ MonoBehaviour:
   enemyPrefab: {fileID: 963616681015761783, guid: 5223fdb253a70494491ad6314b90a6cd,
     type: 3}
   state: 0
-  startQuip: 
+  fleeMiniGame: Platformer
+  startQuip: 'You''re way out of your league right now, '
   damageQuips:
-  - Ouch Ouch Ouch!
-  dialogue: []
+  - Pretty good for an apprentice wizard.
+  - Greg has taught you well...
+  - Okay, that stung, but are you ready for this?
+  talkDialogue:
+  - I hope you know where you stand.
+  - 'Greg sent me to test you. '
+  - Please don't make his Greatness regret it.
 --- !u!4 &122199067
 Transform:
   m_ObjectHideFlags: 0

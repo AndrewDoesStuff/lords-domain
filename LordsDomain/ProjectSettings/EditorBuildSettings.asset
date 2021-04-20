@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Runner-MG.unity
     guid: 4d53c99814e06304ba8a6d2429257468
+  - enabled: 1
+    path: Assets/Scenes/Platformer.unity
+    guid: 308266c043c462040a35c7bdf8ad494b
+  - enabled: 1
+    path: Assets/Scenes/Snake-MG.unity
+    guid: fd187c370b94b0c40b8d6fd34ffd459b
   m_configObjects: {}

@@ -1502,14 +1502,13 @@ MonoBehaviour:
   enemyPrefab: {fileID: 5378518889554071624, guid: 883b0045e37706543a4a1ed002c0c2bf,
     type: 3}
   state: 0
+  fleeMiniGame: Runner-MG
   startQuip: You try and start up a conversation with
   damageQuips:
   - Ouch Ouch Ouch!
   - You're rustling my bones!
   - That's my sensitive spot!
-  dialogue:
-  - what it do
-  - what it do again!
+  talkDialogue: []
 --- !u!1 &1132957848
 GameObject:
   m_ObjectHideFlags: 0
