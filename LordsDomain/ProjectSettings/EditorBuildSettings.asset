@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Runner-MG.unity
     guid: 4d53c99814e06304ba8a6d2429257468
+  - enabled: 1
+    path: Assets/Scenes/BattleScenes/BattleWizard.unity
+    guid: ba1138fa8f3b67f4a869518a884cb7be
   m_configObjects: {}
